@@ -1,0 +1,41 @@
+{
+  "name": "pushterm",
+  "version": "0.1.0",
+  "description": "Send push notifications via IFTTT from the terminal",
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint ./src/",
+    "build": "ncc build src/index.js -o dist",
+    "watch": "ncc build src/index.js -o dist -w",
+    "dev": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BetaHuhn/pushterm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BetaHuhn/pushterm/issues"
+  },
+  "homepage": "https://github.com/BetaHuhn/pushterm#readme",
+  "author": "Maximilian Schiller <schiller@mxis.ch>",
+  "license": "MIT",
+  "keywords": [
+    "nodejs"
+  ],
+  "dependencies": {
+    "commander": "^7.1.0",
+    "configstore": "^5.0.1",
+    "dotenv": "^8.5.1",
+    "got": "^11.8.3",
+    "inquirer": "^8.2.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@betahuhn/config": "^1.2.0",
+    "@vercel/ncc": "^0.31.1",
+    "eslint": "^7.32.0"
+  }
+}
